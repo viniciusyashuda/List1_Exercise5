@@ -7,7 +7,7 @@ namespace List1_Exercise5
         static void Main(string[] args)
         {
 
-            int days = 0, year1, year2, j, older = 0, last = 0 ;
+            int days = 0, year1, year2, yearTotalDays, older = 0, last = 0 ;
 
             Console.Write("Enter a year: ");
             year1 = int.Parse(Console.ReadLine());
@@ -36,16 +36,16 @@ namespace List1_Exercise5
                 if((i % 4 == 0 & i % 100 != 0) || (i % 400 == 0))
                 {
 
-                    j = 366;
+                     yearTotalDays= 366;
 
                 }
                 else
                 {
 
-                    j = 365;
+                    yearTotalDays = 365;
 
                 }
-                days = days + j;
+                days = days + yearTotalDays;
             }
 
             Console.WriteLine($"There are {days} between {older} and {last}");
